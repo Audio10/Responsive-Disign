@@ -1,0 +1,373 @@
+/*
+Selector
+ * Selector de etiqueta : header - section -article -nav
+ * Selector de desentendé : Body -> header -> div -> nav -> ol -> li -> a
+ * Selector de clase o id.
+   -    .nombredeclase
+   -    #nombredelid
+
+Declaración : todo lo que esta dentro de las llaves , compuestas de 
+propiedades y valores.
+ */
+
+/* header{
+    background : pink;
+    color: red;
+} */
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  /* font-style: italic; tipo de tipografia */
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.5em;
+  letter-spacing: -.2px;
+  color: white;
+  margin: 0px;
+  /* margin: 10px 11px 12px */
+  /*  segun recomendaciones debe ser negativo */
+  /* text-transform: capitalize; Transforma el texto en el tipo de tu gusto */
+  /* text-decoration: dashed; */
+}
+
+h1 strong {
+  color: #026fff;
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.portfolio {
+  background: #fafafa;
+  padding: 20px;
+}
+
+.project {
+  /* border-top: 10px solid red;
+  border-right: 10px solid green;
+  border-left: 10px solid orange;
+  border-bottom: 10px solid pink; */
+  /* border-color: red; 
+  border-width: 15px;
+  border-style: solid;*/
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+  /* margin: 10px; */
+  margin-bottom: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* PUEDES AGREGAR EL MISMO VALOR A DIFERENTES CLASES */
+.project-course,
+.project-date,
+.project-url {
+  margin: 10px 0;
+}
+
+.project-title {
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.project-details {
+  width: 500px;
+}
+
+.project-imageContainer {
+  width: 500px;
+}
+
+.project-description {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.hero {
+  height: 300px;
+  /* background-image: url('../imagenes/hero.jpg'); */
+  background-color: #1b2127;
+  /* background-size: 500px 300px; */
+  /* background-repeat: no-repeat; */
+  /* background-position-x: right; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-image{
+  object-fit: cover;
+}
+
+.header {
+  background-color: #1b2127;
+  color: white;
+  display: flex;
+  height: 70px;
+  /* 
+  ALINEAR LOS ELEMENTOS AL CENTRO DE VERTICAL*/
+  align-items: center;
+
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+ol,
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+figure {
+  margin: 0px;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+}
+
+.menu {
+  height: inherit;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+}
+
+.header ol,
+li {
+  height: inherit;
+
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0px 10px;
+}
+
+.flexbox {
+  height: 500px;
+  margin-bottom: 200px;
+  /* DISPLAY FLEX ALINIA TODO EN EL MISMO RENGLON */
+  display: flex;
+  /* ALINIA LOS ELEMENTOS EN ROW / COLUMN EN EL FLEXBOX POR DEFAULT TRAE ROW*/
+  /* flex-direction: row; */
+
+  /* DEFINE SI LOS ELEMENTOS SE ENCOJEN O NO   1 PARA SI, 0 PARA NO */
+  /* flex-shrink: 0; */
+
+  /* DA LA FUNCION QUE CUANDO UN ELEMENTO NO CABE EN EL RENGLON SALTA DE LINEA */
+  flex-wrap: wrap;
+
+  /* NOS AYUDA A ORIENTAR DE FORMA HORIZONTAL EL FLEXBOX */
+  /* space-between sin espacio en el primer y ultimo elemento
+     space-evenly el mismo margen entre todos
+     space-around genera un espacio igual hacia la izquierda y derecha estos se suman si tiene otro elemento junto
+    justify-content: center;
+  */
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  /* ALINEA LOS ELEMENTOS DE FORMA VERTICAL */
+  /* align-items: center; */
+
+
+  border: 1px solid blue;
+
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border: 1px solid red;
+}
+
+.footer {
+  background-color: #1b2127;
+  color: white;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: white;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.event-list-title {
+  margin-left: 20px;
+}
+
+.event {
+  margin: 10px;
+  width: 480px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.event img {
+  width: 480;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-description {
+  text-align: left;
+}
+
+.event-url {
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+
+}
+
+.contact {
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px;
+  border: 1px solid white;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter {
+  background-image: url('../imagenes/twitter.svg');
+}
+
+.social-link.facebook {
+  background-image: url('../imagenes/facebook.svg');
+}
+
+.social-link.github {
+  background-image: url('../imagenes/git.svg');
+}
+
+.social-link.instagram {
+  background-image: url('../imagenes/instagram.svg');
+}
+
+.form-email input{
+  border-color: gray;
+  padding: 10px 20px 10px 25px;
+  border-radius: 5px;
+  border-style: solidl;
+  background-image: url('../imagenes/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+
+}
+
+.form-email button{
+  display: block;
+  background: transparent;
+  color: white;
+  padding: 10px 0px;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+  /* margin: 10 auto 0;  */
+
+}
+
+.form-email h3{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+/* #### desktop first que empiece desde el MQ mas grande */
+
+@media screen and (max-width: 1024px){
+  
+}
+
+/* AGREGA UN MEDIA QUERIE SI EL ANCHO ES MENOR DE 768 */
+@media screen and (max-width: 768px){
+  /* body{
+    border: 10px solid green;
+  } */
+}
+
+@media screen and (max-width: 480px){
+  
+}
+
+@media screen and (max-width: 320px){
+  
+}
